@@ -6,12 +6,13 @@
 class Student {
   /** @private */
   #scholarship;
+
   /**
    * Create a student.
    * @param {String} name
    * @param {String} surName
    * @param {Number} scholarship
-   * @param {number} rating  rating in the group.
+   * @param {Number} rating  rating in the group.
    * @param {String} group
    */
   constructor(name, surName, scholarship, rating, group) {
@@ -29,7 +30,8 @@ class Student {
   getScolarship() {
     return this.#scholarship;
   }
-
+  
+  /** @override */
   toString() {
     return `${this.name} ${this.surName} in the ${this.group} group`;
   }

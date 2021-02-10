@@ -12,9 +12,9 @@ class Text {
     if (isString(str)) {
       this.str = str;
       // eslint-disable-next-line no-useless-escape
-      this.arr = this.str.replace(/[0-9]|[.,\/#!$%?\^&\*;:{}=\-_`~()]/g, ' ').trim().split(' ');
+      this.arr = this.str.replace(/[0-9]|[...]|[.,\/#!$%?\^&\*;:{}=\-_`~()@]/g, ' ').trim().split(' ');
     } else {
-      throw new Error('Not a string');
+      throw new Error(`${str} - not a string.\nExpected 'string' data type`);
     }
   }
 
@@ -30,9 +30,6 @@ class Text {
   }
 }
 
-Text.prototype.someStuff = 'something!';
-Text.someStuff = 'something! Class';
-
-const newStr = new Text(' -_-?1,2,3 First  ,.  New sentence second ,third, LastWordInThisFckSpeech!   ');
+const newStr = new Text('/././.123__Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate laborum esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est %*^%&^*laborum.123');
 newStr.move();
 console.log(newStr.replaced);

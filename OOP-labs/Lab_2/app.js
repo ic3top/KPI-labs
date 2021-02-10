@@ -19,14 +19,14 @@ class Labochka {
 
   sum() {
     if (this.secNumOfRows > 0) {
-      this.firstMatrix.forEach(row => {
+      this.firstMatrix.forEach((row) => {
         for (let i = 0; i < this.rowLenSec; i++) {
           row.push(0);
         }
       });
     }
     if (this.frstNumOfRows > 0) {
-      this.secMatrix.forEach(row => {
+      this.secMatrix.forEach((row) => {
         for (let i = 0; i < this.rowLenFrst; i++) {
           row.push(0);
         }
