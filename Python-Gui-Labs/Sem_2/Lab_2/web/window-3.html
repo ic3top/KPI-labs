@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Third window</title>
+    <script src="eel.js"></script>
+    <style>
+        body {
+            background: #d5d5d5;
+            padding: 20px 0;
+        }
+
+        .container {
+            background: #ffffff;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            width: 1140px;
+            margin: 0 auto;
+            font-weight: 700;
+            box-shadow: 7px 0px 8px 0px rgba(0, 0, 0, 0.52);
+            padding-bottom: 50px;
+        }
+
+        .text-container {
+            box-sizing: border-box;
+            padding: 5px;
+            margin: 0 auto;
+            font-size: 20px;
+        }
+
+        hr {
+            width: 100%;
+        }
+
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+
+        text {
+            fill: #ffffff !important;
+        }
+
+        .head {
+            width: 100%;
+        }
+
+        .links {
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .links a {
+            text-decoration: none;
+            color: #000000 !important;
+            font-weight: 600;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container" style="padding: 0; margin-bottom: 20px">
+        <div class="head">
+            <ol class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="window-1.html">Задати множини(1)</a></li>
+                <li><a href="window-2.html">Створити відношення(2)</a></li>
+                <li><a href="window-3.html">Дії з відношеннями(3)</a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Дії з множинами S і R</h1>
+        <hr>
+        <div id="union">
+            <div class="text-container">
+                <div class="result">R ⋃ S =</div>
+            </div>
+        </div>
+        <hr>
+        <div id="cross">
+            <div class="text-container">
+                <div class="result">R ∩ S =</div>
+            </div>
+        </div>
+        <hr>
+        <div id="difference">
+            <div class="text-container">
+                <div class="result">R \ S =</div>
+            </div>
+        </div>
+        <hr>
+        <div id="addition">
+            <div class="text-container">
+                <div class="result">U \ R =</div>
+            </div>
+        </div>
+        <hr>
+        <div id="inverse">
+            <div class="text-container">
+                <h2>S<sup>-1</sup> = {(a;b) | (b;a) ∈ S}</h2>
+                <div class="result">S<sup>-1</sup> =</div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="js/lib/d3.min.js"></script>
+<script src="js/lib/venn.min.js"></script>
+<script src="js/window-3/script.js"></script>
+</body>
+</html>
