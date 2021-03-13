@@ -1,6 +1,6 @@
 /** 
  * A paragraph module.
- * @module /paragraph
+ * @module paragraph
 */
 // replaceAll - 85%
 

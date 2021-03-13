@@ -235,4 +235,4 @@ def addition():
     return U
 
 
-eel.start('index.html', mode='chrome-app', port=3000, cmdline_args=['--start-fullscreen', '--browser-startup-dialog'])
+eel.start('index.html')

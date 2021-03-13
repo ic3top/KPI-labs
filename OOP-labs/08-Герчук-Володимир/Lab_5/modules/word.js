@@ -1,6 +1,6 @@
 /**
  * Word module.
- * @module ./word
+ * @module word
  */
 import Letter from './letter.js';
 

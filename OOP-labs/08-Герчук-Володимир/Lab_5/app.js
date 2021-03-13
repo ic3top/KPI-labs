@@ -1,6 +1,7 @@
 // export * as - 73%
 // ' ' -> punctuation
-import Paragraph from './paragraph.js';
+
+import Paragraph from './modules/paragraph.js';
 
 /** Class representing a text. */
 class Text {
@@ -15,17 +16,18 @@ class Text {
   }
 
   #roll() {
-    this.text.replace(/[\n\r]/g,'\n ').replace(/ +/g, ' ').split('\n').forEach((el) => {
+    this.text.replace(/[\n\r]/g,'\n ').split('\n').forEach((el) => {
       try {
         this.resultedText.push(new Paragraph(el));
-      } catch(e) {
-        console.log(e);
+      } catch(err) {
+        console.log(err);
       }
     });
   }
+
   /**
    * Get text with replaced first and last words.
-   * @returns {String}
+   * @returns {String} string with replaced first and last words.
   */
   getFinalOutput() {
     const output = [];
@@ -62,6 +64,7 @@ class Text {
 }
 
 const legend = new Text('FirstWord ipsum dolor sit, amet consectetur. Adipisicing elit. Nostrum aperiam placeat mollitia adipisci iusto eligendi, non nemo aspernatur sapiente possimus, quae, officiis cum dolores deleniti eius. Totam quo corporis iure?\nLorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum aperiam placeat mollitia adipisci iusto eligendi, non nemo aspernatur sapiente possimus, quae, officiis cum dolores deleniti eius. Totam quo corporis iure?\nLorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum aperiam placeat molliem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum aperiam placeat mollitia adipisci iusto eligendi, non nemo aspernaturtia adipisci iusto eligendi, non nemo aspernatur sapiente possimus, quae, officiis cum dolores deleniti eius. Totam quo corporis iure?\nLor sapiente possimus, quae. LAST...');
-console.log(legend.text);
-console.log(legend.getFinalOutput());
-console.log(legend.resultedText);
+
+console.log(`%cInput: %c${legend.text}`, 'color: green; font-weight: 700; font-size: 20px;', 'color: #f9f9f9');
+console.log(`%cOutput: %c${legend.getFinalOutput()}`, 'color: green; font-weight: 700; font-size: 20px;', 'color: #f9f9f9');
+console.log('%cTREE:', 'color: green; font-weight: 700; font-size: 20px;', legend.resultedText);

@@ -3,6 +3,7 @@
 // В кожному реченні заданого тексту змінити
 // місцями перше та останнє слово, не змінивши довжини речення.
 // String object unchangable in JAVA
+
 function isString(variable) {
   return typeof (variable) === 'string';
 }
@@ -26,6 +27,7 @@ class Text {
     const lastEl = this.arr[this.arr.length - 1];
     const firstEl = this.arr[0];
     // replace - replaces only first occurence
+    // todo fix lasEl replace
     this.replaced = this.str.replace(lastEl, firstEl).replace(firstEl, lastEl);
   }
 }

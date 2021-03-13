@@ -1,21 +1,21 @@
-/** 
+/**
  * Sentence module.
- * @module ./sentence 
+ * @module sentence
  */
+
 import Word from './word.js';
 import Punctuation from './punctuation.js';
 
 /** Class representing one sentence. */
 export default class Sentence {
-  /** 
-   * An array of punctuation marks. 
-   * @static 
+  /**
+   * An array of punctuation marks.
+   * @static
    */
-  static punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ '.split('')+['...'];
-
+  static punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ '.split('') + ['...'];
   /**
    * Create a sentence.
-   * @param {String} sentence 
+   * @param {String} sentence
    */
   constructor(sentence) {
     this.sentence = [];

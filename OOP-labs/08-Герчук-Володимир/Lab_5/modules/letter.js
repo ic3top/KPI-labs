@@ -1,6 +1,6 @@
 /**
  * A letter module. The lowest level.
- * @module ./letter
+ * @module letter
  */
 
 /** Class representing a single letter. */

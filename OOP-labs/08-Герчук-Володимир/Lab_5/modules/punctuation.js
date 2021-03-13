@@ -1,6 +1,6 @@
 /**
- * A punctuation marks module.
- * @module ./punctuation
+ * The punctuation marks module.
+ * @module punctuation
  */
 /** Class representing a punctuation mark. */
 export default class Punctuation {
