@@ -1,0 +1,218 @@
+@media (max-width: 1200px)
+	.menu
+		padding: 13px 0px
+		margin: 0
+		&_link
+			font-size: 14px
+		&_item
+			padding-right: 12px
+			text-decoration: none
+	.subheader
+		.logo
+			width: 300px
+			font-size: 28px
+			&::after
+				width: 2px
+				height: 200px
+			&::before
+				height: 2px
+	.subtitle
+		font-size: 24px
+
+	.retro
+		font-size: 60px
+		margin-top: 60px
+		text-shadow: 2px 2px 0 #fcfaf7
+	
+
+@media (max-width: 992px)
+	* 
+		font-size: 14px
+	.subheader
+		min-height: 100vh
+		background: url("../img/bg/second_otto.jpg") center (center / cover) no-repeat
+
+	.hidden-md
+		display: none
+
+	a 
+		&:hover 
+			color: #383a3c
+		&::after
+			content: none
+		&:hover:after
+				width: 0
+
+	nav
+		min-height: 30px
+
+	.menu
+		padding: 10px 0px
+		&_link
+			font-size: 10px
+		&_item
+			padding-right: 12px
+
+	.subheader
+		.logo
+			width: 250px
+			font-size: 24px
+			&::after
+				width: 2px
+				height: 200px
+			&::before
+				width: 100%
+				height: 2px
+	.subtitle
+		font-size: 20px
+
+	.retro
+		font-size: 40px
+		margin-top: 50px
+
+	.lego
+		+sec('../img/bg/white.png')
+		&_descr_block
+			max-width: 100%
+			div
+				margin-top: 40px
+			img
+				width: 100%
+				height: auto		
+		p
+			&:nth-child(1)
+				margin-top: 0
+	.atraction
+		.pre
+			img
+				max-width: 80%
+	footer
+		.git
+			padding: 8px
+			img
+				width: 30px
+				height: 30px
+				margin-right: 15px
+
+@media (max-width: 768px)
+	.menu
+		position: fixed
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		top: 0
+		left: -100%
+		width: 70%
+		height: 100vh
+		padding: 20px 15px
+		background-color: rgba(0, 0, 0, .8)
+		transition: .8s all
+
+		&_active
+			left: 0
+		&_item
+			padding-right: 0
+			border: none
+			margin: 20px 0
+		&_link
+			font-size: 16px
+			color: #fff
+
+	.hamburger
+		display: block
+		position: absolute
+		right: 10px
+		top: 50%
+		transform: translateY(-50%)
+		width: 26px
+		height: 12px
+		span
+			display: block
+			height: 2px
+			width: 100%
+			background-color: #fff
+			margin-bottom: 2px
+			transition: .5s all
+		&_active
+			span
+				margin-bottom: -2px
+				&:nth-child(1)
+					transform: translateY(3px) rotate(-45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: translateY(3px) rotate(45deg)
+	*
+		font-size: 12px
+	.retro
+		font-size: 30px
+		margin-top: 40px
+	.subtitle
+		font-size: 15px
+
+	.subheader
+		.logo
+			width: 200px
+			font-size: 16px
+			&::after
+				width: 2px
+				height: 100px
+			&::before
+				width: 100%
+				height: 2px
+
+	.adventure
+		.pictures
+			&_big
+				width: 40%
+
+	.lego
+		&_descr_block
+			div
+				margin-top: 10px
+			img
+				max-width: 70%
+	.atraction
+		.pre
+			img
+				max-width: 70%
+	.end
+		min-height: auto
+		&_descr
+			img
+				max-width: 70%
+
+@media (max-width: 576px)
+	nav
+		height: 30px
+	.menu
+		width: 85%
+		&_item 
+			width: 100%
+			text-align: center
+			padding: 5px 0
+		&_link
+			display: block
+			font-size: 14px	
+	.hamburger
+		&_active 
+			span 
+				&:nth-child(1)
+					transform: translateY(5px) rotate(-45deg)
+				&:nth-child(3)
+					transform: translateY(5px) rotate(45deg)
+	.retro
+		font-size: 20px
+		margin-top: 30px
+		text-shadow: 1px 1px 0 #fcfaf7
+	.subheader
+		.logo
+			left: 60px
+			width: 150px
+			font-size: 14px
+			&::after
+				top: -20px
+				left: -5px	
+			&::before
+				left: -15px
+				top: -10px

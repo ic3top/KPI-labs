@@ -1,0 +1,327 @@
+@import ./_mixins
+@import ./_variables
+
+.header
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 100
+	width: 100%
+	height: 70px
+	background-color: #000000
+	opacity: 0.7
+	padding: 20px 50px
+	&__body  
+		display: block
+		position: relative
+		display: flex
+		align-items: center
+	&__links
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__link
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			width: 100%
+			height: 2px
+			bottom: 0
+			left: 0
+			background-color: #fff
+			visibility: hidden
+			transform: scaleX(0)
+			transition: all 0.3s ease-in-out 0s
+		&:hover::before 
+			visibility: visible
+			transform: scaleX(1)
+
+.menu
+	display: flex
+	justify-content: space-between
+	padding: 13px 70px
+	margin: 0
+	list-style-type: none
+	position: fixed
+	flex-direction: column
+	justify-content: flex-start
+	align-items: flex-end
+	top: 0
+	right: -100%
+	width: 350px
+	height: 100vh
+	padding: 0 10px
+	background-color: rgba(0, 0, 0, .8)
+	transition: .8s all
+	&_active
+		right: 0
+	&__item
+		margin-top: 10px
+		&_first
+			margin: 40px auto 0 auto
+			width: 100%
+			text-align: center
+			border: solid #ffffff
+			border-width: 0 0 1px
+.hamburger
+	display: block
+	position: absolute
+	right: 10px
+	top: 50%
+	transform: translateY(-50%)
+	width: 26px
+	height: 12px
+	span
+		display: block
+		height: 2px
+		width: 100%
+		background-color: #fff
+		margin-bottom: 2px
+		transition: .5s all
+	&_active
+		span
+			margin-bottom: -2px
+			&:nth-child(1)
+				transform: translateY(3px) rotate(-45deg)
+			&:nth-child(2)
+				display: none
+			&:nth-child(3)
+				transform: translateY(3px) rotate(45deg)
+
+.parallax 
+	padding: 50px
+	max-width: 100%
+	display: flex
+	flex-flow: column
+	justify-content: space-between
+	
+	/* The image used */
+	
+	/* Set a specific height */
+	min-height: 101vh
+
+	/* Create the parallax scrolling effect */
+	background: transparent
+	background-attachment: fixed
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	&_bg1
+		background: url(../img/backgrounds/planet.jpg)
+		background-attachment: fixed
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+	&_bg2
+		background: url(../img/backgrounds/starship.webp)
+		background-attachment: fixed
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+	&_bg3
+		background: url(../img/backgrounds/tesla.jpg)
+		background-attachment: fixed
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+	&_bg4
+		background: url(../img/backgrounds/solarcity.webp)
+		background-attachment: fixed
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+	&_bg5
+		background: url(../img/backgrounds/TBC.jpg)
+		background-attachment: fixed
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+	&::before
+		content: ''
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 1
+	&__descr
+		padding: 10px
+		display: block
+		top: 10px
+		background-color: #000000
+		opacity: .7
+		width: 40%
+		border-radius: 20px
+	&__title
+		margin-left: 20px
+
+.title
+	display: block
+	margin: 0 auto
+	font-size: 44px
+	font-family: 'Permanent Marker', cursive
+	text-align: center
+	line-height: 50px
+.subtitle
+	display: block
+	margin: 0 auto
+	font-size: 20px
+	text-align: center
+	letter-spacing: 2px
+	&_left
+		text-align: left
+		margin: 0
+	&_db
+		margin-bottom: 20px
+		text-align: center
+		display: block
+		font-size: 24px 
+	&_bg
+		font-size: 22px
+		display: inline-block
+		background-color: $blue-dark
+.logo
+	font-size: 44px
+	font-family: 'Permanent Marker', cursive
+.link
+	font-size: 18px
+	font-weight: 700
+	color: #ffffff
+	text-decoration: none
+	&_big
+		font-size: 24px
+	&_hovered
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			width: 100%
+			height: 2px
+			bottom: 0
+			left: 0
+			background-color: #fff
+			visibility: hidden
+			transform: scaleX(0)
+			transition: all 0.3s ease-in-out 0s
+		&:hover::before 
+			visibility: visible
+			transform: scaleX(1)
+.section
+	margin: 0
+	padding: 0
+	text-align: center
+	&__wrapper
+		padding: 50px
+		min-height: 220px
+	&__subtitle
+		margin-top: 50px
+
+.block
+	padding: 20px 0
+	background: rgb(2,0,36)
+	background: -moz-linear-gradient(180deg, rgba(2,0,36,1) 3%, rgba(2,2,51,1) 100%)
+	background: -webkit-linear-gradient(180deg, rgba(2,0,36,1) 3%, rgba(2,2,51,1) 100%)
+	background: linear-gradient(180deg, rgba(2,0,36,1) 3%, rgba(2,2,51,1) 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#020233",GradientType=1)
+	&__left
+		min-height: 600px
+		padding: 0 20px
+		display: flex
+		flex-flow: column
+		align-items: center
+		justify-content: space-around
+		
+	&__right
+		position: relative
+
+		height: 600px
+		display: flex
+		justify-content: center
+		align-items: center
+		img
+			max-height: 600px
+			width: 100%
+		video
+			width: 99%	
+		&_img
+			img
+				width: 70%
+	&__opener
+		padding: 20px 50px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		cursor: pointer
+		border: solid #ffffff
+		border-width: 1px 0 0
+	&__descr
+		font-size: 36px
+		letter-spacing: 6px
+		margin-top: 40px 
+		&_sm
+			font-size: 20px
+			letter-spacing: 3px
+			a
+				text-decoration: underline
+				transition: .2s all
+				&:hover
+					color: $blue-light
+	&__achivements
+		text-align: left
+		padding: 10px 50px 50px
+	&__link
+		color: grey
+		margin-top: 20px
+		border: solid grey
+		border-width: 0px 0px 2px 0px
+	
+.btn
+	max-width: 300px
+	border: none
+	padding: 10px 44px
+	font-size: 36px
+	position: relative
+	margin-top: 50px
+	&::before
+		transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+		content: ''
+		width: 50%
+		height: 100%
+		background: black
+		position: absolute
+		top: 0
+		left: 0
+
+	&-text
+		color: white
+		// check out mdn docs for different types of blend modes. 
+		mix-blend-mode: difference
+	
+	&:hover
+		&::before
+			background: black
+			width: 100%
+		
+.arrow
+	width: 50px
+	display: block
+	transition: .3s all
+
+.footer
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	text-align: center
+	padding: 20px
+	span
+		font-size: 12px
+    	margin: 0 20px
+	&__git
+		display: flex
+		justify-content: space-between
+		align-items: center
+		img
+			display: block
+			width: 50px
+			margin: 0 5px

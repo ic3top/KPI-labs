@@ -1,0 +1,23 @@
+.parallax 
+	/* The image used */
+	background-image: url("../img/main.jpg")
+	-webkit-filter: brightness(70%)
+	
+	/* Set a specific height */
+	height: 101vh
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	padding: 30% 10%
+	padding-top: 20%
+	&_second
+		background-image: url("../img/first_auto.jpg")
+	&_third
+		background-image: url("../img/motor.jpg")
+	&__descr
+		padding: 20px 5px
+		margin: 0 auto
+
